@@ -20,7 +20,7 @@ URL = 'https://github.com/aaron235/sendowl-python'
 EMAIL = 'qwertyman159@gmail.com'
 AUTHOR = 'Aaron Adler'
 REQUIRES_PYTHON = '>=3.5.0'
-VERSION = None
+VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
