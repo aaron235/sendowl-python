@@ -19,13 +19,12 @@ DESCRIPTION = 'Unofficial API Wrapper for SendOwl'
 URL = 'https://github.com/aaron235/sendowl-python'
 EMAIL = 'qwertyman159@gmail.com'
 AUTHOR = 'Aaron Adler'
-REQUIRES_PYTHON = '>=3.5.0'
+REQUIRES_PYTHON = '>=3.6.0'
 VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-	# 'requests', 'maya', 'records',
-	]
+	'requests']
 
 # What packages are optional?
 EXTRAS = {
@@ -122,7 +121,7 @@ setup(
 		'License :: OSI Approved :: MIT License',
 		'Programming Language :: Python',
 		'Programming Language :: Python :: 3',
-		'Programming Language :: Python :: 3.6',
+		'Programming Language :: Python :: 3.5',
 		'Programming Language :: Python :: Implementation :: CPython',
 		'Programming Language :: Python :: Implementation :: PyPy'],
 	# $ setup.py publish support.
