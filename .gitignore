@@ -3,3 +3,9 @@ venv
 
 # Ignore PyCharm IDE Files:
 \.idea
+
+# Ignore Python caches:
+__pycache__
+
+# Ignore MyPy cache:
+\.mypy_cache
