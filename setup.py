@@ -14,17 +14,18 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'sendowl-python'
+NAME = 'sendowl_python'
 DESCRIPTION = 'Unofficial API Wrapper for SendOwl'
 URL = 'https://github.com/aaron235/sendowl-python'
 EMAIL = 'qwertyman159@gmail.com'
 AUTHOR = 'Aaron Adler'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 # What packages are required for this module to be executed?
-REQUIRED = [
-	'requests']
+REQUIRED = ['requests']
+
+TESTS_REQUIRED = ['pytest']
 
 # What packages are optional?
 EXTRAS = {
@@ -112,6 +113,7 @@ setup(
 	#     'console_scripts': ['mycli=mymodule:cli'],
 	# },
 	install_requires=REQUIRED,
+	tests_require=TESTS_REQUIRED,
 	extras_require=EXTRAS,
 	include_package_data=True,
 	license='MIT',
