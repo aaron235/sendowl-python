@@ -10,7 +10,7 @@ class SendOwl:
 
 		self._baseUrl = f"https://{self._key}:{self._secret}@www.sendowl.com/api/v1/"
 
-	def _apiRequest(self, method: str, path: str, params: Dict[str, str] = None) -> Union[List, Dict]:
+	def _apiRequest(self, method: str, path: str, params: Dict[str, str] = None) -> Union[List, Dict, None]:
 		headers = {'Accept': 'application/json'}
 		method = method.lower()
 		url = f'{self._baseUrl}{path}'
@@ -27,10 +27,13 @@ class SendOwl:
 			req = requests.delete(url, headers=headers)
 		else:
 			raise ValueError(f'Invalid request method "{method}"')
-		try:
-			return req.json()
-		except json.JSONDecodeError:
-			raise RuntimeError(f'Response returned from SendOwl: {req.text}')
+		if req.text:
+			try:
+				return req.json()
+			except json.JSONDecodeError:
+				raise RuntimeError(f'Response returned from SendOwl: {req.text}')
+		else:
+			return None
 
 	def get_products(self) -> Union[List, Dict]:
 		return self._apiRequest('get', 'products')
